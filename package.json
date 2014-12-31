@@ -1,0 +1,50 @@
+{
+  "name": "@faultless/monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "nofault - A Node.js microservice framework inspired by modern microservice architecture",
+  "scripts": {
+    "bootstrap": "pnpm install && pnpm run build:all",
+    "build:all": "pnpm --filter=@faultless/* run build",
+    "test:all": "pnpm --filter=@faultless/* run test",
+    "lint:all": "pnpm --filter=@faultless/* run lint",
+    "version:patch": "pnpm version patch --filter=@faultless/*",
+    "version:minor": "pnpm version minor --filter=@faultless/*",
+    "version:major": "pnpm version major --filter=@faultless/*",
+    "docs:build": "pnpm --filter=@faultless/docs run build",
+    "examples:run": "pnpm --filter=@faultless/examples run dev",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "microservice",
+    "framework",
+    "nodejs",
+    "typescript"
+  ],
+  "author": "nofault team",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "conventional-changelog-cli": "^5.0.0",
+    "eslint": "^9.0.0",
+    "husky": "^9.0.0",
+    "pnpm": "^9.0.0",
+    "prettier": "^3.3.0",
+    "typescript": "^5.5.0",
+    "unbuild": "^3.6.0",
+    "vitest": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "dependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "bcryptjs": "^3.0.3",
+    "jsonwebtoken": "^9.0.3",
+    "reflect-metadata": "^0.2.2"
+  }
+}
