@@ -1,0 +1,60 @@
+{
+  "name": "@faultless/store",
+  "version": "7.0.0",
+  "description": "nofault Database Store - SQL, MongoDB, ORM Integration",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "test": "vitest run",
+    "dev": "vitest"
+  },
+  "dependencies": {
+    "@faultless/core": "workspace:*",
+    "@faultless/log": "workspace:*",
+    "@faultless/config": "workspace:*",
+    "pg": "^8.11.0",
+    "mysql2": "^3.6.0",
+    "mongodb": "^6.0.0",
+    "typeorm": "^0.3.17"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "unbuild": "catalog:",
+    "@types/node": "catalog:",
+    "@types/pg": "^8.10.0"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nofault-framework/nofault.git"
+  },
+  "homepage": "https://github.com/nofault-framework/nofault#readme",
+  "bugs": {
+    "url": "https://github.com/nofault-framework/nofault/issues"
+  },
+  "keywords": [
+    "nofault",
+    "store",
+    "database",
+    "orm",
+    "repository",
+    "data-access"
+  ]
+}
