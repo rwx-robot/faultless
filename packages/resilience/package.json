@@ -1,0 +1,57 @@
+{
+  "name": "@faultless/resilience",
+  "version": "5.0.0",
+  "description": "nofault Advanced Resilience Patterns - Bulkhead, Timeout Budget, Fault Injection, Smart Retry",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "test": "vitest run",
+    "dev": "vitest"
+  },
+  "dependencies": {
+    "@faultless/core": "workspace:*",
+    "@faultless/log": "workspace:*",
+    "@faultless/config": "workspace:*",
+    "@faultless/breaker": "workspace:*",
+    "@faultless/http": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "unbuild": "catalog:",
+    "@types/node": "catalog:"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nofault-framework/nofault.git"
+  },
+  "homepage": "https://github.com/nofault-framework/nofault#readme",
+  "bugs": {
+    "url": "https://github.com/nofault-framework/nofault/issues"
+  },
+  "keywords": [
+    "nofault",
+    "resilience",
+    "retry",
+    "timeout",
+    "fallback",
+    "bulkhead"
+  ]
+}
