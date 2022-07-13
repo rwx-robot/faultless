@@ -1,0 +1,55 @@
+{
+  "name": "@faultless/stream",
+  "version": "0.0.0",
+  "description": "Stream utilities for Node.js - helper class for readable, writable, and transform streams",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "eslint": "catalog:",
+    "unbuild": "catalog:",
+    "@types/node": "catalog:"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nofault-framework/nofault.git"
+  },
+  "homepage": "https://github.com/nofault-framework/nofault#readme",
+  "bugs": {
+    "url": "https://github.com/nofault-framework/nofault/issues"
+  },
+  "keywords": [
+    "nofault",
+    "stream",
+    "readable",
+    "writable",
+    "transform",
+    "pipe"
+  ],
+  "license": "MIT"
+}
