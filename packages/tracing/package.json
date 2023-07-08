@@ -1,0 +1,63 @@
+{
+  "name": "@faultless/tracing",
+  "version": "8.0.0",
+  "description": "nofault Distributed Tracing - OpenTelemetry Integration",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "test": "vitest run",
+    "dev": "vitest"
+  },
+  "dependencies": {
+    "@faultless/core": "workspace:*",
+    "@faultless/log": "workspace:*",
+    "@opentelemetry/api": "^1.7.0",
+    "@opentelemetry/sdk-trace-node": "^1.19.0",
+    "@opentelemetry/sdk-trace-base": "^1.19.0",
+    "@opentelemetry/resources": "^1.19.0",
+    "@opentelemetry/semantic-conventions": "^1.19.0",
+    "@opentelemetry/exporter-jaeger": "^1.19.0",
+    "@opentelemetry/exporter-zipkin": "^1.19.0",
+    "@opentelemetry/exporter-trace-otlp-grpc": "^0.45.0",
+    "@opentelemetry/instrumentation-http": "^0.45.0",
+    "@opentelemetry/instrumentation-grpc": "^0.45.0"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "unbuild": "catalog:",
+    "@types/node": "catalog:"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nofault-framework/nofault.git"
+  },
+  "homepage": "https://github.com/nofault-framework/nofault#readme",
+  "bugs": {
+    "url": "https://github.com/nofault-framework/nofault/issues"
+  },
+  "keywords": [
+    "nofault",
+    "tracing",
+    "opentelemetry",
+    "jaeger",
+    "distributed-tracing"
+  ]
+}
