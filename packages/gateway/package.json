@@ -1,0 +1,63 @@
+{
+  "name": "@faultless/gateway",
+  "version": "9.0.0",
+  "description": "nofault API Gateway - Routing, Transformation, Rate Limiting",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "test": "vitest run",
+    "dev": "vitest"
+  },
+  "dependencies": {
+    "@faultless/core": "workspace:*",
+    "@faultless/http": "workspace:*",
+    "@faultless/log": "workspace:*",
+    "@faultless/config": "workspace:*",
+    "@faultless/breaker": "workspace:*",
+    "@faultless/limit": "workspace:*",
+    "@faultless/discovery": "workspace:*",
+    "@faultless/resilience": "workspace:*",
+    "@faultless/tracing": "workspace:*",
+    "@faultless/metrics": "workspace:*",
+    "@fastify/request-context": "^5.0.0",
+    "fast-querystring": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "unbuild": "catalog:",
+    "@types/node": "catalog:"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nofault-framework/nofault.git"
+  },
+  "homepage": "https://github.com/nofault-framework/nofault#readme",
+  "bugs": {
+    "url": "https://github.com/nofault-framework/nofault/issues"
+  },
+  "keywords": [
+    "nofault",
+    "api-gateway",
+    "gateway",
+    "proxy",
+    "routing"
+  ]
+}
