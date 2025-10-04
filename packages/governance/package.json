@@ -1,0 +1,62 @@
+{
+  "name": "@faultless/governance",
+  "version": "11.0.0",
+  "description": "nofault Governance - Service Mesh, Circuit Breaker Dashboard, Rate Limiting Dashboard",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "test": "vitest run",
+    "dev": "vitest"
+  },
+  "dependencies": {
+    "@faultless/core": "workspace:*",
+    "@faultless/http": "workspace:*",
+    "@faultless/log": "workspace:*",
+    "@faultless/config": "workspace:*",
+    "@faultless/breaker": "workspace:*",
+    "@faultless/limit": "workspace:*",
+    "@faultless/discovery": "workspace:*",
+    "@faultless/cache": "workspace:*",
+    "@faultless/store": "workspace:*",
+    "@faultless/tracing": "workspace:*",
+    "@faultless/metrics": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "unbuild": "catalog:",
+    "@types/node": "catalog:"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nofault-framework/nofault.git"
+  },
+  "homepage": "https://github.com/nofault-framework/nofault#readme",
+  "bugs": {
+    "url": "https://github.com/nofault-framework/nofault/issues"
+  },
+  "keywords": [
+    "nofault",
+    "governance",
+    "rate-limit",
+    "flow-control",
+    "load-balance"
+  ]
+}
