@@ -1,0 +1,66 @@
+{
+  "name": "NoFault",
+  "scopeName": "source.nofault",
+  "patterns": [
+    {
+      "match": "@(Controller|Injectable|Model|Middleware|Guard|Interceptor|Pipe|Filter)\\s*\\(",
+      "name": "decorator.nofault"
+    },
+    {
+      "match": "@(Get|Post|Put|Delete|Patch|Head|Options)\\s*\\(",
+      "name": "decorator.route.nofault"
+    },
+    {
+      "match": "@Field\\s*\\(",
+      "name": "decorator.field.nofault"
+    },
+    {
+      "match": "\\b(import|from|export|default|class|extends|implements|interface|type|const|let|var|function|async|await|return|new|if|else|throw|try|catch)\\b",
+      "name": "keyword.nofault"
+    },
+    {
+      "match": "\\b(string|number|boolean|any|void|null|undefined|never|unknown|object|Array|Promise|Record)\\b",
+      "name": "support.type.nofault"
+    },
+    {
+      "match": "\\b(Controller|Injectable|Model|Middleware|Guard|Interceptor|Pipe|Filter|Context|NextFunction|App|Field)\\b",
+      "name": "support.class.nofault"
+    },
+    {
+      "match": "\\b(Get|Post|Put|Delete|Patch|Head|Options)\\b",
+      "name": "support.function.nofault"
+    },
+    {
+      "match": ":[a-zA-Z_][a-zA-Z0-9_]*",
+      "name": "variable.parameter.nofault"
+    },
+    {
+      "match": "'[^']*'",
+      "name": "string.quoted.single.nofault"
+    },
+    {
+      "match": "\"[^\"]*\"",
+      "name": "string.quoted.double.nofault"
+    },
+    {
+      "match": "`[^`]*`",
+      "name": "string.template.nofault"
+    },
+    {
+      "match": "//.*$",
+      "name": "comment.line.double-slash.nofault"
+    },
+    {
+      "match": "/\\*[\\s\\S]*?\\*/",
+      "name": "comment.block.nofault"
+    },
+    {
+      "match": "\\b\\d+(\\.\\d+)?\\b",
+      "name": "constant.numeric.nofault"
+    },
+    {
+      "match": "\\b(true|false)\\b",
+      "name": "constant.language.nofault"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@faultless/example-v7-cache-store",
+  "version": "7.0.0",
+  "private": true,
+  "description": "v7.0.0 Cache + Store Example",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@faultless/core": "../packages/core",
+    "@faultless/http": "../packages/http",
+    "@faultless/log": "../packages/log",
+    "@faultless/config": "../packages/config",
+    "@faultless/cache": "../packages/cache",
+    "@faultless/store": "../packages/store",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0",
+    "tsx": "^4.16.0",
+    "@types/node": "^22.0.0"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "app": {
+    "name": "nofault-v2-example",
+    "version": "2.0.0",
+    "env": "development",
+    "port": 3000,
+    "host": "0.0.0.0"
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "postgres",
+    "database": "nofault_dev",
+    "ssl": false,
+    "poolSize": 5
+  },
+  "redis": {
+    "host": "localhost",
+    "port": 6379,
+    "db": 0,
+    "keyPrefix": "nofault:dev:",
+    "cluster": false
+  },
+  "logging": {
+    "level": "debug",
+    "structuredFields": true,
+    "sampler": "probabilistic",
+    "samplerRate": 1.0,
+    "asyncWrite": true
+  },
+  "features": {
+    "debugMode": true,
+    "mockExternalServices": true
+  }
+}

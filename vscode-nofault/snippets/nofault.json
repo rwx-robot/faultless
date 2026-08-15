@@ -1,0 +1,188 @@
+{
+  "NoFault Controller": {
+    "prefix": "nf-controller",
+    "body": [
+      "import { Controller, Get, Post, Put, Delete } from 'nofault';",
+      "",
+      "@Controller('${1:resource}')",
+      "export class ${2:Resource}Controller {",
+      "  @Get('/')",
+      "  findAll() {",
+      "    return { data: [] };",
+      "  }",
+      "",
+      "  @Get('/:id')",
+      "  findOne(id: string) {",
+      "    return { data: {} };",
+      "  }",
+      "",
+      "  @Post('/')",
+      "  create(body: any) {",
+      "    return { data: body };",
+      "  }",
+      "",
+      "  @Put('/:id')",
+      "  update(id: string, body: any) {",
+      "    return { data: body };",
+      "  }",
+      "",
+      "  @Delete('/:id')",
+      "  remove(id: string) {",
+      "    return { success: true };",
+      "  }",
+      "}"
+    ],
+    "description": "NoFault controller with CRUD routes"
+  },
+  "NoFault Service": {
+    "prefix": "nf-service",
+    "body": [
+      "import { Injectable } from 'nofault';",
+      "",
+      "@Injectable()",
+      "export class ${1:Resource}Service {",
+      "  async findAll() {",
+      "    return [];",
+      "  }",
+      "",
+      "  async findOne(id: string) {",
+      "    return null;",
+      "  }",
+      "",
+      "  async create(data: any) {",
+      "    return data;",
+      "  }",
+      "",
+      "  async update(id: string, data: any) {",
+      "    return data;",
+      "  }",
+      "",
+      "  async remove(id: string) {",
+      "    return true;",
+      "  }",
+      "}"
+    ],
+    "description": "NoFault service with CRUD methods"
+  },
+  "NoFault Model": {
+    "prefix": "nf-model",
+    "body": [
+      "import { Model, Field } from 'nofault';",
+      "",
+      "@Model('${1:resource}')",
+      "export class ${2:Resource} {",
+      "  @Field({ primary: true })",
+      "  id: string = '';",
+      "",
+      "  @Field()",
+      "  createdAt: Date = new Date();",
+      "",
+      "  @Field()",
+      "  updatedAt: Date = new Date();",
+      "}"
+    ],
+    "description": "NoFault model with fields"
+  },
+  "NoFault Middleware": {
+    "prefix": "nf-middleware",
+    "body": [
+      "import { Middleware, Context, NextFunction } from 'nofault';",
+      "",
+      "@Middleware()",
+      "export class ${1:Custom}Middleware {",
+      "  use(ctx: Context, next: NextFunction) {",
+      "    // Before",
+      "    next();",
+      "    // After",
+      "  }",
+      "}"
+    ],
+    "description": "NoFault middleware"
+  },
+  "NoFault Guard": {
+    "prefix": "nf-guard",
+    "body": [
+      "import { Guard, Context } from 'nofault';",
+      "",
+      "@Guard()",
+      "export class ${1:Auth}Guard {",
+      "  canActivate(ctx: Context): boolean {",
+      "    // Return true to allow, false to deny",
+      "    return true;",
+      "  }",
+      "}"
+    ],
+    "description": "NoFault guard for route protection"
+  },
+  "NoFault Interceptor": {
+    "prefix": "nf-interceptor",
+    "body": [
+      "import { Interceptor, Context } from 'nofault';",
+      "",
+      "@Interceptor()",
+      "export class ${1:Logging}Interceptor {",
+      "  intercept(ctx: Context, handler: () => Promise<any>) {",
+      "    // Before",
+      "    const result = handler();",
+      "    // After",
+      "    return result;",
+      "  }",
+      "}"
+    ],
+    "description": "NoFault interceptor"
+  },
+  "NoFault Pipe": {
+    "prefix": "nf-pipe",
+    "body": [
+      "import { Pipe, PipeTransform } from 'nofault';",
+      "",
+      "@Pipe()",
+      "export class ${1:Validation}Pipe implements PipeTransform {",
+      "  transform(value: any) {",
+      "    return value;",
+      "  }",
+      "}"
+    ],
+    "description": "NoFault pipe for data transformation"
+  },
+  "NoFault Filter": {
+    "prefix": "nf-filter",
+    "body": [
+      "import { Filter, ExceptionFilter, Context } from 'nofault';",
+      "",
+      "@Filter()",
+      "export class ${1:Global}Filter implements ExceptionFilter {",
+      "  catch(exception: Error, ctx: Context) {",
+      "    return {",
+      "      statusCode: 500,",
+      "      message: exception.message",
+      "    };",
+      "  }",
+      "}"
+    ],
+    "description": "NoFault exception filter"
+  },
+  "NoFault Route": {
+    "prefix": "nf-route",
+    "body": [
+      "@${1:Get|Post|Put|Delete}('${2:/path}')",
+      "${3:methodName}(ctx: Context) {",
+      "  ${4:// implementation}",
+      "}"
+    ],
+    "description": "NoFault route decorator"
+  },
+  "NoFault App": {
+    "prefix": "nf-app",
+    "body": [
+      "import { App } from 'nofault';",
+      "",
+      "const app = new App();",
+      "",
+      "app.listen(${1:3000}, () => {",
+      "  console.log('Server running on port ${1:3000}');",
+      "});"
+    ],
+    "description": "NoFault app bootstrap"
+  }
+}

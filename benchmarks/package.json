@@ -1,0 +1,34 @@
+{
+  "name": "@faultless/benchmarks",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Performance benchmarks for Faultless framework",
+  "scripts": {
+    "bench": "vitest bench --run",
+    "bench:http": "vitest bench --run http.bench.ts",
+    "bench:core": "vitest bench --run core.bench.ts",
+    "bench:middleware": "vitest bench --run middleware.bench.ts",
+    "bench:syncx": "vitest bench --run syncx.bench.ts",
+    "bench:resilience": "vitest bench --run resilience.bench.ts",
+    "bench:comparison": "vitest bench --run comparison.bench.ts"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.0",
+    "@types/node": "^22.0.0",
+    "@types/express": "^4.17.21",
+    "typescript": "^5.5.0"
+  },
+  "dependencies": {
+    "@faultless/core": "workspace:*",
+    "@faultless/http": "workspace:*",
+    "@faultless/concurrency": "workspace:*",
+    "@faultless/collection": "workspace:*",
+    "@faultless/breaker": "workspace:*",
+    "@faultless/limit": "workspace:*",
+    "@faultless/cache": "workspace:*",
+    "@faultless/resilience": "workspace:*",
+    "fastify": "^4.28.0",
+    "express": "^4.21.0",
+    "reflect-metadata": "^0.2.2"
+  }
+}

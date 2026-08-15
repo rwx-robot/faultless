@@ -1,0 +1,93 @@
+{
+  "name": "nofault-vscode",
+  "displayName": "NoFault Framework",
+  "description": "VS Code extension for the NoFault framework - scaffolding, snippets, and language support",
+  "version": "0.1.0",
+  "publisher": "webfault",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Other"
+  ],
+  "keywords": [
+    "nofault",
+    "framework",
+    "controller",
+    "service",
+    "scaffold"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "nofault.new",
+        "title": "NoFault: New Project"
+      },
+      {
+        "command": "nofault.generate.controller",
+        "title": "NoFault: Generate Controller"
+      },
+      {
+        "command": "nofault.generate.service",
+        "title": "NoFault: Generate Service"
+      },
+      {
+        "command": "nofault.generate.model",
+        "title": "NoFault: Generate Model"
+      },
+      {
+        "command": "nofault.dev",
+        "title": "NoFault: Start Dev Server"
+      },
+      {
+        "command": "nofault.build",
+        "title": "NoFault: Build Project"
+      },
+      {
+        "command": "nofault.test",
+        "title": "NoFault: Run Tests"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/nofault.json"
+      }
+    ],
+    "languages": [
+      {
+        "id": "nofault",
+        "aliases": [
+          "NoFault",
+          "nofault"
+        ],
+        "extensions": [
+          ".nofault"
+        ],
+        "configuration": "./syntaxes/language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "nofault",
+        "scopeName": "source.nofault",
+        "path": "./syntaxes/nofault.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.3"
+  }
+}
