@@ -1,0 +1,60 @@
+{
+  "name": "@faultless/cli",
+  "version": "10.0.0",
+  "description": "nofault CLI - Code Generation Tool",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "nofault": "dist/index.cjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "test": "vitest run",
+    "dev": "vitest"
+  },
+  "dependencies": {
+    "@faultless/core": "workspace:*",
+    "@faultless/http": "workspace:*",
+    "commander": "^12.0.0",
+    "inquirer": "^9.2.0",
+    "chalk": "^5.3.0",
+    "ora": "^8.0.0",
+    "fast-glob": "^3.3.0"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "unbuild": "catalog:",
+    "@types/node": "catalog:"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nofault-framework/nofault.git"
+  },
+  "homepage": "https://github.com/nofault-framework/nofault#readme",
+  "bugs": {
+    "url": "https://github.com/nofault-framework/nofault/issues"
+  },
+  "keywords": [
+    "nofault",
+    "cli",
+    "command-line",
+    "scaffolding"
+  ]
+}
